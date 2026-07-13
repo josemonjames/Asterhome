@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aster Residential Home Care | Elder & Nursing Care in Kakkanad, Kochi</title>
+<meta name="description" content="Aster Residential Home Care provides professional elderly care, nursing, post-hospital and companionship care at home in Kakkanad, Kochi, Kerala — with coordination for families abroad.">
+<style>
+  :root{
+    --navy:#122A3E;
+    --navy-soft:#1D3C54;
+    --teal:#2F7367;
+    --teal-soft:#E7F0EE;
+    --bg:#F7F8FA;
+    --white:#FFFFFF;
+    --ink:#20272E;
+    --ink-soft:#5C6670;
+    --line:#E3E7EB;
+    --radius:8px;
+    --shadow:0 12px 30px -18px rgba(18,42,62,0.28);
+  }
+  *{ box-sizing:border-box; }
+  html{ scroll-behavior:smooth; }
+  body{
+    margin:0; background:var(--bg); color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.65;
+  }
+  a{ text-decoration:none; color:inherit; }
+  img{ max-width:100%; }
+  h1,h2,h3,h4{ font-weight:700; line-height:1.2; margin:0 0 .5em; color:var(--navy); letter-spacing:-0.01em; }
+  p{ margin:0 0 1em; }
+  .container{ max-width:1120px; margin:0 auto; padding:0 24px; }
+  .eyebrow{
+    font-size:12.5px; font-weight:700; letter-spacing:.12em; text-transform:uppercase;
+    color:var(--teal); display:inline-flex; align-items:center; gap:8px; margin-bottom:12px;
+  }
+  .eyebrow::before{ content:""; width:18px; height:2px; background:var(--teal); display:inline-block; border-radius:2px; }
+
+  /* Buttons */
+  .btn{
+    display:inline-flex; align-items:center; gap:8px; padding:13px 24px; border-radius:6px;
+    font-weight:600; font-size:14.5px; border:1.5px solid transparent; cursor:pointer;
+    transition:transform .2s ease, background .2s ease, color .2s ease, border-color .2s ease;
+  }
+  .btn-primary{ background:var(--teal); color:var(--white); }
+  .btn-primary:hover{ background:#255d53; transform:translateY(-2px); }
+  .btn-outline{ background:transparent; border-color:var(--navy); color:var(--navy); }
+  .btn-outline:hover{ background:var(--navy); color:var(--white); transform:translateY(-2px); }
+  .btn-light{ background:var(--white); color:var(--navy); }
+  .btn-light:hover{ background:var(--teal-soft); transform:translateY(-2px); }
+  .btn-sm{ padding:9px 16px; font-size:13px; }
+
+  /* Header */
+  .topbar{ background:var(--navy); color:rgba(255,255,255,0.85); font-size:13px; }
+  .topbar .container{ display:flex; justify-content:space-between; align-items:center; padding:8px 24px; flex-wrap:wrap; gap:6px; }
+  .topbar a:hover{ color:#fff; text-decoration:underline; }
+  .topbar-links{ display:flex; gap:20px; align-items:center; }
+
+  header.site-header{
+    position:sticky; top:0; z-index:50; background:rgba(247,248,250,0.94);
+    backdrop-filter:blur(8px); border-bottom:1px solid var(--line);
+  }
+  .nav{ display:flex; align-items:center; justify-content:space-between; padding:14px 0; }
+  .brand{ display:flex; align-items:center; gap:10px; }
+  .brand-mark{
+    width:38px; height:38px; border-radius:8px; background:var(--navy); color:var(--white);
+    display:flex; align-items:center; justify-content:center; font-size:17px; font-weight:700; flex-shrink:0;
+  }
+  .brand-name{ font-size:17.5px; font-weight:700; color:var(--navy); line-height:1.1; }
+  .brand-name span{ display:block; font-size:10.5px; font-weight:600; letter-spacing:.1em; text-transform:uppercase; color:var(--ink-soft); margin-top:3px; }
+  .nav-links{ display:flex; gap:30px; align-items:center; }
+  .nav-links a{ font-size:14.5px; font-weight:500; color:var(--ink); position:relative; padding:4px 0; }
+  .nav-links a:hover{ color:var(--teal); }
+  .nav-cta{ display:flex; align-items:center; gap:14px; }
+  .nav-toggle{ display:none; background:none; border:none; cursor:pointer; }
+
+  /* Hero — no imagery, just clean type + a simple stat panel */
+  .hero{ padding:64px 0 60px; border-bottom:1px solid var(--line); }
+  .hero .container{ display:grid; grid-template-columns:1.15fr .85fr; gap:50px; align-items:center; }
+  .hero h1{ font-size:clamp(30px,4vw,46px); }
+  .hero h1 span{ color:var(--teal); }
+  .hero-lede{ font-size:16.5px; color:var(--ink-soft); max-width:48ch; }
+  .hero-actions{ display:flex; gap:14px; margin:26px 0 30px; flex-wrap:wrap; }
+  .hero-trust{ display:flex; gap:30px; flex-wrap:wrap; }
+  .hero-trust div{ font-size:13px; color:var(--ink-soft); max-width:150px; }
+  .hero-trust strong{ display:block; font-size:24px; color:var(--navy); font-weight:700; }
+  .hero-panel{
+    background:var(--navy); color:#fff; border-radius:var(--radius); padding:34px 30px; box-shadow:var(--shadow);
+  }
+  .hero-panel h3{ color:#fff; font-size:18px; margin-bottom:18px; }
+  .hero-panel ul{ list-style:none; margin:0 0 22px; padding:0; }
+  .hero-panel li{ display:flex; gap:10px; align-items:flex-start; font-size:14px; color:rgba(255,255,255,0.85); margin-bottom:12px; }
+  .hero-panel li::before{ content:"✓"; color:#7FD1BE; font-weight:700; flex-shrink:0; }
+
+  /* Sections */
+  section{ padding:76px 0; }
+  .section-alt{ background:var(--white); border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
+  .section-deep{ background:var(--navy); color:#fff; }
+  .section-deep h2{ color:#fff; }
+  .section-deep .eyebrow{ color:#7FD1BE; }
+  .section-deep .eyebrow::before{ background:#7FD1BE; }
+  .section-head{ max-width:620px; margin-bottom:44px; }
+  .section-head.center{ margin-left:auto; margin-right:auto; text-align:center; }
+
+  /* Two column */
+  .two-col{ display:grid; grid-template-columns:1fr 1fr; gap:56px; align-items:center; }
+  .list-check{ list-style:none; margin:0; padding:0; }
+  .list-check li{ display:flex; gap:10px; margin-bottom:12px; font-size:14.8px; align-items:flex-start; }
+  .list-check li::before{ content:"✓"; color:var(--teal); font-weight:700; flex-shrink:0; }
+  .stat-row{ display:flex; gap:40px; flex-wrap:wrap; }
+  .stat strong{ font-size:32px; color:var(--navy); display:block; font-weight:700; }
+  .stat span{ font-size:12.8px; color:var(--ink-soft); }
+
+  /* Cards */
+  .grid-3{ display:grid; grid-template-columns:repeat(3,1fr); gap:22px; }
+  .grid-2{ display:grid; grid-template-columns:repeat(2,1fr); gap:22px; }
+  .card{
+    background:var(--white); border:1px solid var(--line); padding:28px 24px; border-radius:var(--radius);
+    transition:transform .25s ease, box-shadow .25s ease;
+  }
+  .card:hover{ transform:translateY(-3px); box-shadow:var(--shadow); }
+  .card-icon{
+    width:42px; height:42px; border-radius:8px; background:var(--teal-soft); color:var(--teal);
+    display:flex; align-items:center; justify-content:center; margin-bottom:16px;
+  }
+  .card h3{ font-size:18.5px; margin-bottom:8px; }
+  .card p{ color:var(--ink-soft); font-size:14.3px; margin-bottom:10px; }
+  .card a{ font-size:13.3px; font-weight:600; color:var(--teal); }
+
+  /* Steps */
+  .steps{ display:grid; grid-template-columns:repeat(4,1fr); gap:24px; }
+  .step .step-index{ font-size:13px; font-weight:700; color:var(--teal); letter-spacing:.06em; }
+  .step h4{ font-size:16px; margin:10px 0 6px; }
+  .step p{ font-size:13.5px; color:var(--ink-soft); }
+
+  /* Testimonials */
+  .testi-track{ display:grid; grid-template-columns:repeat(3,1fr); gap:20px; }
+  .testi{ background:var(--white); border-radius:var(--radius); padding:26px 24px; border:1px solid var(--line); }
+  .testi p.msg{ font-size:14.5px; color:var(--ink); }
+  .testi .who{ display:flex; align-items:center; gap:10px; margin-top:16px; }
+  .testi .who .avatar{
+    width:34px; height:34px; border-radius:50%; background:var(--teal-soft); color:var(--teal);
+    display:flex; align-items:center; justify-content:center; font-weight:700; font-size:14px;
+  }
+  .testi .who small{ display:block; color:var(--ink-soft); font-size:12px; }
+
+  /* CTA band */
+  .cta-band{
+    background:var(--navy); color:#fff; border-radius:var(--radius); padding:46px 50px;
+    display:flex; justify-content:space-between; align-items:center; gap:30px; flex-wrap:wrap;
+  }
+  .cta-band h2{ color:#fff; font-size:26px; max-width:520px; margin:0; }
+
+  /* Forms */
+  .form-field{ margin-bottom:16px; }
+  .form-field label{ display:block; font-size:13px; font-weight:600; margin-bottom:6px; color:var(--navy); }
+  .form-field input, .form-field select, .form-field textarea{
+    width:100%; padding:12px 13px; border:1px solid var(--line); border-radius:6px;
+    font-family:inherit; font-size:14px; background:var(--white); color:var(--ink);
+  }
+  .form-field input:focus, .form-field select:focus, .form-field textarea:focus{
+    outline:2px solid var(--teal); outline-offset:1px; border-color:var(--teal);
+  }
+  .form-row{ display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+  .form-note{ font-size:12px; color:var(--ink-soft); margin-top:10px; }
+  #form-status{ font-size:13.5px; margin-top:12px; font-weight:600; }
+
+  /* Footer */
+  footer{ background:var(--navy); color:rgba(255,255,255,0.85); padding-top:56px; }
+  .footer-grid{ display:grid; grid-template-columns:1.4fr 1fr 1fr 1.2fr; gap:36px; padding-bottom:40px; }
+  footer h5{ font-size:12px; letter-spacing:.12em; text-transform:uppercase; color:#7FD1BE; margin-bottom:16px; }
+  footer p, footer a{ color:rgba(255,255,255,0.72); font-size:13.8px; }
+  footer ul{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:10px; }
+  footer a:hover{ color:#fff; }
+  .footer-bottom{
+    border-top:1px solid rgba(255,255,255,0.14); padding:20px 0; display:flex; justify-content:space-between;
+    flex-wrap:wrap; gap:8px; font-size:12px; color:rgba(255,255,255,0.55);
+  }
+
+  .reveal{ opacity:0; transform:translateY(14px); transition:opacity .6s ease, transform .6s ease; }
+  .reveal.in{ opacity:1; transform:translateY(0); }
+  .skip-link{ position:absolute; left:-999px; top:0; background:#7FD1BE; color:var(--navy); padding:10px 16px; z-index:100; }
+  .skip-link:focus{ left:16px; top:16px; }
+
+  @media (max-width:960px){
+    .hero .container{ grid-template-columns:1fr; }
+    .grid-3, .testi-track{ grid-template-columns:1fr 1fr; }
+    .steps{ grid-template-columns:1fr 1fr; row-gap:28px; }
+    .footer-grid{ grid-template-columns:1fr 1fr; }
+    .two-col{ grid-template-columns:1fr; gap:32px; }
+    .form-row{ grid-template-columns:1fr; }
+  }
+  @media (max-width:720px){
+    .nav-links{
+      position:fixed; inset:0 0 0 30%; top:64px; background:var(--bg);
+      flex-direction:column; align-items:flex-start; padding:26px; gap:20px;
+      transform:translateX(100%); transition:transform .3s ease; border-left:1px solid var(--line);
+    }
+    .nav-links.open{ transform:translateX(0); }
+    .nav-toggle{ display:block; }
+    .nav-cta .btn-outline{ display:none; }
+    .grid-3, .grid-2, .testi-track{ grid-template-columns:1fr; }
+    .steps{ grid-template-columns:1fr; }
+    .footer-grid{ grid-template-columns:1fr; }
+    .cta-band{ padding:34px 22px; flex-direction:column; align-items:flex-start; }
+    .topbar-links{ display:none; }
+  }
+  @media (prefers-reduced-motion: reduce){ *{ animation:none !important; transition:none !important; } }
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<div class="topbar">
+  <div class="container">
+    <div class="topbar-links">
+      <a href="tel:+91 70122 03182">📞 +91 70122 03182</a>
+      <a href="mailto:info@asterhomecare.uk">info@asterhomecare.uk</a>
+    </div>
+    <div class="topbar-links">
+      <span>Kakkanad, Kochi, Kerala</span>
+    </div>
+  </div>
+</div>
+
+<header class="site-header">
+  <nav class="nav container">
+    <a class="brand" href="#top">
+      <span class="brand-mark">A</span>
+      <span class="brand-name">Aster Residential<span>Home Care · Kakkanad</span></span>
+    </a>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#122A3E" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#testimonials">Testimonials</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="nav-cta">
+      <a href="tel:+91 7012203182" class="btn btn-outline btn-sm">Call Now</a>
+      <a href="#contact" class="btn btn-primary btn-sm">Free Assessment</a>
+    </div>
+  </nav>
+</header>
+
+<main id="main">
+
+  <!-- HERO -->
+  <section class="hero" id="top">
+    <div class="container">
+      <div class="reveal in">
+        <p class="eyebrow">Home care in Kakkanad, Kerala</p>
+        <h1>Compassionate care for your parents, <span>at home</span>.</h1>
+        <p class="hero-lede">Aster Residential Home Care sends trained nurses and caregivers into homes across Kakkanad and greater Kochi, so your family gets hospital-quality care with the warmth of home. We coordinate directly with children and relatives living abroad.</p>
+        <div class="hero-actions">
+          <a href="#contact" class="btn btn-primary">Book a Free Care Assessment</a>
+          <a href="tel:+91 7012203182" class="btn btn-outline">Speak to a Care Advisor</a>
+        </div>
+        <div class="hero-trust">
+          <div><strong>250+</strong>Families supported across Kochi</div>
+          <div><strong>24/7</strong>Nursing helpline for emergencies</div>
+          <div><strong>100%</strong>Background-verified caregivers</div>
+        </div>
+      </div>
+      <div class="hero-panel reveal in">
+        <h3>Why families choose Aster</h3>
+        <ul>
+          <li>Caregivers and nurses trained and police-verified before placement</li>
+          <li>A dedicated care coordinator for every family — not a call centre</li>
+          <li>Weekly updates sent to relatives living abroad, on request</li>
+          <li>Doctor-on-call and ambulance tie-ups across Kochi</li>
+        </ul>
+        <a href="#contact" class="btn btn-light btn-sm">Book Free Assessment</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="container two-col">
+      <div class="reveal">
+        <p class="eyebrow">Our story</p>
+        <h2>Built in Kakkanad, for families who can't always be there.</h2>
+        <p style="color:var(--ink-soft); font-size:15px;">Aster was founded by a team with backgrounds in clinical nursing and hospital administration, after watching capable, loving families struggle with the same problem: an ageing parent at home, and children working in Bengaluru, Dubai, London or beyond.</p>
+        <p style="color:var(--ink-soft); font-size:15px;">We built Aster to be the reliable, well-trained presence a family would choose for their own parents — supervised care, honest communication, and no surprises.</p>
+        <div class="stat-row" style="margin-top:22px;">
+          <div class="stat"><strong>9+</strong><span>Years in Kochi</span></div>
+          <div class="stat"><strong>40+</strong><span>Nurses &amp; caregivers</span></div>
+          <div class="stat"><strong>4.9★</strong><span>Family rating</span></div>
+        </div>
+      </div>
+      <div class="reveal">
+        <div class="card" style="padding:30px 26px;">
+          <h3 style="margin-bottom:16px;">What we stand for</h3>
+          <ul class="list-check">
+            <li><strong>Dignity first</strong> — care plans built around what your parent wants, not just clinical need.</li>
+            <li><strong>Clinical rigour</strong> — nursing supervisors set and audit every care standard.</li>
+            <li><strong>Honest communication</strong> — a named coordinator, always reachable.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="section-alt" id="services">
+    <div class="container">
+      <div class="section-head center reveal">
+        <p class="eyebrow">What we do</p>
+        <h2>A full range of home care services</h2>
+      </div>
+      <div class="grid-3 reveal">
+        <div class="card">
+          <div class="card-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 1 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"/></svg></div>
+          <h3>Elderly &amp; Senior Care</h3>
+          <p>Daily living support — bathing, dressing, mobility, feeding — from caregivers trained in geriatric care.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 14c1.5-1.5 3-3.5 3-6a5 5 0 0 0-9-3 5 5 0 0 0-9 3c0 4 4.5 8 9.5 13 1.4-1.4 2.7-2.7 3.9-4"/></svg></div>
+          <h3>Skilled Nursing Care</h3>
+          <p>Registered nurses for wound care, injections, catheter and stoma care, and vitals monitoring at home.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12h4l2-8 4 16 2-8h4"/></svg></div>
+          <h3>Post-Hospital Recovery</h3>
+          <p>Structured recovery plans after surgery, stroke or hospitalisation, coordinated with your doctor.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg></div>
+          <h3>Companionship Care</h3>
+          <p>A friendly, familiar presence for company, conversation, meals and light household support.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 4h9l3 3v13H6z"/><path d="M9 9h6M9 13h6M9 17h3"/></svg></div>
+          <h3>Palliative &amp; Respite Care</h3>
+          <p>Comfort-focused care for advanced illness, and short-term relief so family caregivers can rest.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg></div>
+          <h3>Care Coordination Abroad</h3>
+          <p>Video updates, expense tracking and a single point of contact for children living overseas.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section>
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">How it works</p>
+        <h2>From first call to care at home, in four steps</h2>
+      </div>
+      <div class="steps reveal">
+        <div class="step"><span class="step-index">STEP 01</span><h4>Free assessment</h4><p>A coordinator visits your home, or speaks with family abroad by video call.</p></div>
+        <div class="step"><span class="step-index">STEP 02</span><h4>Personalised care plan</h4><p>We match caregiver skills, language and personality to your parent's needs.</p></div>
+        <div class="step"><span class="step-index">STEP 03</span><h4>Caregiver placement</h4><p>A verified caregiver or nurse begins visits on the schedule that suits you.</p></div>
+        <div class="step"><span class="step-index">STEP 04</span><h4>Ongoing oversight</h4><p>Regular supervisor visits, written updates and a 24/7 helpline.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="section-alt" id="testimonials">
+    <div class="container">
+      <div class="section-head center reveal">
+        <p class="eyebrow">Families we've cared for</p>
+        <h2>What Kochi families are saying</h2>
+      </div>
+      <div class="testi-track reveal">
+        <div class="testi">
+          <p class="msg">"I live in London and couldn't be there when my mother needed care after her fall. Aster's nurse was at her door within a day, with a video update every evening."</p>
+          <div class="who"><div class="avatar">R</div><div><strong>Gauri K.</strong><small>Daughter, London</small></div></div>
+        </div>
+        <div class="testi">
+          <p class="msg">"The caregiver they sent for my father is patient, punctual and genuinely kind. It's given our whole family peace of mind."</p>
+          <div class="who"><div class="avatar">T</div><div><strong>Manoj P.</strong><small>Son, Kakkanad</small></div></div>
+        </div>
+        <div class="testi">
+          <p class="msg">"Their nurse managed my mother's post-surgery wound care perfectly, and coordinated directly with her surgeon."</p>
+          <div class="who"><div class="avatar">S</div><div><strong>Ginu M.</strong><small>Daughter, Kochi</small></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section>
+    <div class="container">
+      <div class="cta-band reveal">
+        <h2>Let's build a care plan for your family — free to assess.</h2>
+        <div style="display:flex; gap:12px; flex-wrap:wrap;">
+          <a href="#contact" class="btn btn-light">Book Free Assessment</a>
+          <a href="tel:+91 7012203182" class="btn btn-outline" style="border-color:rgba(255,255,255,.5); color:#fff;">+91 7012203182</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="container two-col" style="align-items:flex-start;">
+      <div class="reveal">
+        <p class="eyebrow">Get in touch</p>
+        <h2>Book a free care assessment</h2>
+        <p style="color:var(--ink-soft); font-size:14.8px; margin-bottom:24px;">Tell us about your parent's needs. A coordinator will call or email you back within one working day.</p>
+        <form id="contact-form" novalidate>
+          <div class="form-row">
+            <div class="form-field"><label for="name">Your name *</label><input type="text" id="name" name="name" required></div>
+            <div class="form-field"><label for="phone">Phone / WhatsApp *</label><input type="tel" id="phone" name="phone" required></div>
+          </div>
+          <div class="form-field"><label for="email">Email *</label><input type="email" id="email" name="email" required></div>
+          <div class="form-field">
+            <label for="service">Care needed</label>
+            <select id="service" name="service">
+              <option>Elderly &amp; Senior Care</option>
+              <option>Skilled Nursing Care</option>
+              <option>Post-Hospital Recovery</option>
+              <option>Companionship Care</option>
+              <option>Palliative &amp; Respite Care</option>
+              <option>Not sure — need advice</option>
+            </select>
+          </div>
+          <div class="form-field"><label for="message">Tell us about your parent's needs *</label><textarea id="message" name="message" rows="4" required></textarea></div>
+          <button type="submit" class="btn btn-primary">Submit Enquiry</button>
+          <p id="form-status" role="status"></p>
+          <p class="form-note">This form is a front-end demo — connect it to your email or CRM (e.g. Formspree) before publishing live.</p>
+        </form>
+      </div>
+      <div class="reveal">
+        <div class="card" style="padding:28px 26px; margin-bottom:20px;">
+          <h3 style="margin-bottom:14px;">Reach us directly</h3>
+          <ul class="list-check">
+            <li><a href="tel:+91 7012203182">+91 7012203182</a></li>
+            <li><a href="https://wa.me/917012203182" target="_blank" rel="noopener">WhatsApp us</a></li>
+            <li><a href="mailto:info@asterhomecare.uk">info@asterhomecare.uk</a></li>
+            <li>24-hour nursing helpline, every day</li>
+          </ul>
+        </div>
+        <div class="card" style="padding:0; overflow:hidden;">
+          <iframe title="Aster Residential Home Care — Kakkanad, Kochi" src="https://www.google.com/maps?q=Kakkanad,+Kochi,+Kerala&output=embed" width="100%" height="260" style="border:0; display:block;" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <div style="padding:18px 20px;">
+            <strong style="color:var(--navy);">Our office</strong>
+            <p style="margin:6px 0 0; font-size:13.5px; color:var(--ink-soft);">Kakkanad, Kochi, Kerala, India</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="brand" style="margin-bottom:14px;">
+          <span class="brand-mark">A</span>
+          <span class="brand-name" style="color:#fff;">Aster Residential<span style="color:#7FD1BE;">Home Care</span></span>
+        </div>
+        <p>Professional, in-home nursing and elderly care based in Kakkanad, Kochi.</p>
+      </div>
+      <div>
+        <h5>Explore</h5>
+        <ul><li><a href="#about">About</a></li><li><a href="#services">Services</a></li><li><a href="#testimonials">Testimonials</a></li><li><a href="#contact">Contact</a></li></ul>
+      </div>
+      <div>
+        <h5>Services</h5>
+        <ul><li><a href="#services">Elderly Care</a></li><li><a href="#services">Nursing Care</a></li><li><a href="#services">Post-Hospital Care</a></li><li><a href="#services">Care for Families Abroad</a></li></ul>
+      </div>
+      <div>
+        <h5>Contact</h5>
+        <ul><li>Kakkanad, Kochi, Kerala</li><li><a href="tel:+91 7012203182">+91 7012203182</a></li><li><a href="mailto:info@asterhomecare.uk">info@asterhomecare.uk</a></li><li>24-hour helpline</li></ul>
+      </div>
+    </div>
+    <div class="footer-bottom container" style="padding-left:0; padding-right:0;">
+      <span>© 2026 Aster Residential Home Care. All rights reserved.</span>
+      <span>asterhomecare.uk</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const toggle = document.querySelector('.nav-toggle');
+  const links = document.querySelector('.nav-links');
+  if (toggle && links) {
+    toggle.addEventListener('click', () => {
+      links.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', links.classList.contains('open'));
+    });
+    links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => links.classList.remove('open')));
+  }
+  const revealEls = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window && revealEls.length) {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('in'); io.unobserve(entry.target); } });
+    }, { threshold: 0.12 });
+    revealEls.forEach(el => io.observe(el));
+  } else { revealEls.forEach(el => el.classList.add('in')); }
+
+  const form = document.getElementById('contact-form');
+  const status = document.getElementById('form-status');
+  if (form) {
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const required = form.querySelectorAll('[required]');
+      let valid = true;
+      required.forEach(field => { if (!field.value.trim()) valid = false; });
+      if (!valid) { status.textContent = 'Please fill in all required fields marked with *.'; status.style.color = '#C0392B'; return; }
+      status.textContent = 'Thank you — your enquiry has been received. Our care team will call you back within one working day.';
+      status.style.color = '#2F7367';
+      form.reset();
+    });
+  }
+});
+</script>
+</body>
+</html>
